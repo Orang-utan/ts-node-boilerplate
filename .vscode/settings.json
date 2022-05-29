@@ -1,0 +1,58 @@
+{
+  // Copy this file to .vscode/settings.json
+
+  // Set the default formatter for VS Code. This is important if you want files to be formatted on save.
+  // Name: Prettier - Code formatter
+  // Marketplace link: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Disable formatting by default for other files. Ex: Avoiding formatting json files
+  "editor.formatOnSave": false, 
+
+  // These are types of files we want to format on save [js, jsx, ts, tsx]
+  // Add any language by language customization here
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+  },
+
+  // Help VSCode identify filetypes for files it would not otherwise recognize
+  // (so they get syntax highlighting, cmd-/ to comment, etc)
+  "files.associations": {
+    ".env.*": "properties",
+  },
+
+  // ESLint Settings Options - https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
+  // You may turn off the eslint server in VS Code if you have it running in the terminal
+  // I.e. if DISABLE_WEBPACK_LINT=false in your .env.local file
+  //
+  // This will surface any linting issues on the `problems` tab (cmd + shift + m)
+  // In general, these will be fixed by prettier
+  // The config can be found in .eslintrc
+  "eslint.enable": true,
+
+  // These are types of files we want to validate [js, jsx, ts, tsx]
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
+
+  // ... rest of your config ...
+}
